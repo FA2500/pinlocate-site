@@ -169,7 +169,7 @@ export const ms: Content = {
     subtitle: "Percuma untuk keluarga. Pro untuk kerja.",
     free: {
       name: "Percuma",
-      price: "RM 0",
+      price: "MYR 0",
       period: "",
       blurb: "Semua yang keluarga perlukan.",
       items: [

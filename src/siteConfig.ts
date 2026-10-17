@@ -14,7 +14,7 @@ export const siteConfig = {
   // false: "Coming soon to Google Play". true: the official Google Play badge.
   playLive: false,
   // Play sets the real price per country; this is the Malaysian one.
-  proPrice: { en: "RM 0.99/month", ms: "RM 0.99/bulan" },
+  proPrice: { en: "MYR 0.99/month", ms: "MYR 0.99/bulan" },
   trialWeeks: 2,
   photoLimits: { free: 3, pro: 10 },
   features: {

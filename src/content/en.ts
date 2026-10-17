@@ -169,7 +169,7 @@ export const en: Content = {
     subtitle: "Free for families. Pro for work.",
     free: {
       name: "Free",
-      price: "RM 0",
+      price: "MYR 0",
       period: "",
       blurb: "Everything a family needs.",
       items: [
