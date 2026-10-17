@@ -26,7 +26,7 @@ export function SiteFooter({ lang }: { lang: Lang }) {
         <nav aria-label={c.footer.sections}>
           <h2 className="text-sm font-bold">{c.footer.sections}</h2>
           <ul className="mt-2">
-            {navItems(lang).map((item) => (
+            {[...navItems(lang), { href: localePath(lang, "/press/"), label: c.ui.press }].map((item) => (
               <li key={item.href}>
                 <a href={item.href} className={linkClass}>
                   {item.label}

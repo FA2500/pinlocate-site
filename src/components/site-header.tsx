@@ -1,4 +1,4 @@
-import { siteConfig, localePath, playUrl, type Lang } from "@/siteConfig";
+import { siteConfig, guidesPath, localePath, playUrl, type Lang, type PlaySource } from "@/siteConfig";
 import { t } from "@/content";
 import { buttonVariants } from "@/components/ui/button";
 import { LangSwitch } from "@/components/lang-switch";
@@ -15,20 +15,36 @@ export function navItems(lang: Lang) {
     { href: `${home}#pricing`, label: c.pricing },
     ...(siteConfig.testimonials.length ? [{ href: `${home}#reviews`, label: c.reviews }] : []),
     { href: `${home}#faq`, label: c.faq },
+    { href: guidesPath(lang), label: c.guides },
   ];
 }
 
-export function getAppHref(lang: Lang) {
-  return siteConfig.playLive ? playUrl(lang) : `${localePath(lang, "/")}#download`;
+export function getAppHref(lang: Lang, page: string, source?: PlaySource) {
+  return siteConfig.playLive ? playUrl(lang, page, source) : `${localePath(lang, "/")}#download`;
 }
 
-/** [path] is this page's path without the language prefix, such as "/privacy/". */
-export function SiteHeader({ lang, path }: { lang: Lang; path: string }) {
+/**
+ * [path] is this page's path without the language prefix, such as "/privacy/"; [otherHref] is the other
+ * language's page when its path differs (the guides). [page] tags the Google Play link (see playUrl).
+ */
+export function SiteHeader({
+  lang,
+  path,
+  otherHref,
+  page,
+  source,
+}: {
+  lang: Lang;
+  path: string;
+  otherHref?: string;
+  page: string;
+  source?: PlaySource;
+}) {
   const c = t(lang).ui;
   const other: Lang = lang === "en" ? "ms" : "en";
   const items = navItems(lang);
   const switcher = (className?: string) => (
-    <LangSwitch href={localePath(other, path)} lang={other} short={c.switchShort} label={c.switchLabel} className={className} />
+    <LangSwitch href={otherHref ?? localePath(other, path)} lang={other} short={c.switchShort} label={c.switchLabel} className={className} />
   );
 
   return (
@@ -54,7 +70,7 @@ export function SiteHeader({ lang, path }: { lang: Lang; path: string }) {
         </nav>
         <div className="ml-auto flex items-center gap-1 lg:ml-2">
           {switcher("hidden sm:inline-flex")}
-          <a href={getAppHref(lang)} className={cn(buttonVariants(), "hidden sm:inline-flex")}>
+          <a href={getAppHref(lang, page, source)} className={cn(buttonVariants(), "hidden sm:inline-flex")}>
             {c.getApp}
           </a>
           <MobileNav
@@ -64,7 +80,7 @@ export function SiteHeader({ lang, path }: { lang: Lang; path: string }) {
             footer={
               <>
                 {switcher("justify-start border border-border")}
-                <a href={getAppHref(lang)} className={buttonVariants({ size: "lg" })}>
+                <a href={getAppHref(lang, page, source)} className={buttonVariants({ size: "lg" })}>
                   {c.getApp}
                 </a>
               </>

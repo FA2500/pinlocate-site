@@ -133,11 +133,49 @@ test.describe("SEO and legal", () => {
     });
   }
 
-  test("JSON-LD is a SoftwareApplication with no ratings", async ({ page }) => {
+  test("home JSON-LD: the organization, the app with its offers, and the FAQ, with no ratings", async ({ page }) => {
     await page.goto("/");
     const data = JSON.parse((await page.locator('script[type="application/ld+json"]').textContent()) ?? "{}");
-    expect(data["@type"]).toBe("SoftwareApplication");
+    const types = data["@graph"].map((item: { "@type": string }) => item["@type"]);
+    expect(types).toEqual(["Organization", "SoftwareApplication", "FAQPage"]);
+    const app = data["@graph"][1];
+    expect(app.operatingSystem).toBe("Android");
+    expect(app.offers.map((o: { price: string }) => o.price)).toEqual(["0", "0.99"]);
+    expect(app.offers[1].priceSpecification[0].billingDuration).toBe("P2W");
+    expect(data["@graph"][2].mainEntity).toHaveLength(9);
     expect(JSON.stringify(data)).not.toMatch(/"(aggregateRating|review|ratingValue|reviewCount)"/);
+  });
+
+  test("a guide links to its other language, and has Article JSON-LD and its own OG image", async ({ page }) => {
+    await page.goto("/guides/share-exact-house-location-whatsapp/");
+    const ms = "https://pinlocate.link/ms/panduan/kongsi-lokasi-rumah-tepat-whatsapp/";
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://pinlocate.link/guides/share-exact-house-location-whatsapp/");
+    await expect(page.locator('link[rel="alternate"][hreflang="ms"]')).toHaveAttribute("href", ms);
+    await expect(page.locator("header [data-lang-switch]")).toHaveAttribute("href", "/ms/panduan/kongsi-lokasi-rumah-tepat-whatsapp/");
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", "https://pinlocate.link/og/share-location-en.png");
+    await expect(page.locator('meta[property="og:type"]')).toHaveAttribute("content", "article");
+    const data = JSON.parse((await page.locator('script[type="application/ld+json"]').textContent()) ?? "{}");
+    const article = data["@graph"].find((item: { "@type": string }) => item["@type"] === "Article");
+    expect(article).toMatchObject({ headline: "How to share an exact house location on WhatsApp", author: { name: "PinLocate" } });
+    await page.goto("/ms/panduan/");
+    await expect(page.locator("header [data-lang-switch]")).toHaveAttribute("href", "/guides/");
+  });
+
+  test("the guides are in the menu and the press kit in the footer", async ({ page }) => {
+    await page.goto("/ms/");
+    await expect(page.locator("header nav").getByRole("link", { name: "Panduan" })).toHaveAttribute("href", "/ms/panduan/");
+    await expect(page.locator("footer").getByRole("link", { name: "Panduan" })).toHaveAttribute("href", "/ms/panduan/");
+    await expect(page.locator("footer").getByRole("link", { name: "Media" })).toHaveAttribute("href", "/ms/press/");
+  });
+
+  test("robots.txt keeps /p/ out for every crawler, and llms.txt is there", async ({ request }) => {
+    const robots = await (await request.get("/robots.txt")).text();
+    for (const bot of ["GPTBot", "OAI-SearchBot", "Google-Extended", "PerplexityBot", "ClaudeBot", "Bingbot", "*"]) {
+      expect(robots).toContain(`User-agent: ${bot}\nAllow: /\nDisallow: /p/\nDisallow: /ms/p/\n`);
+    }
+    const llms = await request.get("/llms.txt");
+    expect(llms.status()).toBe(200);
+    expect(await llms.text()).toContain("https://pinlocate.link/press/");
   });
 
   test("the Terms have no draft banner and keep their date", async ({ page }) => {

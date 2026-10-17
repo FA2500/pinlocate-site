@@ -51,7 +51,7 @@ export const ms: Content = {
   },
   ui: {
     skip: "Langkau ke kandungan",
-    nav: { features: "Ciri", how: "Cara guna", pricing: "Harga", faq: "Soalan lazim", reviews: "Ulasan" },
+    nav: { features: "Ciri", how: "Cara guna", pricing: "Harga", faq: "Soalan lazim", reviews: "Ulasan", guides: "Panduan" },
     menu: "Menu",
     closeMenu: "Tutup menu",
     getApp: "Dapatkan apl",
@@ -60,6 +60,7 @@ export const ms: Content = {
     home: "Laman utama",
     privacy: "Polisi privasi",
     terms: "Terma perkhidmatan",
+    press: "Media",
     contact: "Hubungi",
     backHome: "Kembali ke laman utama",
     effective: "Berkuat kuasa",

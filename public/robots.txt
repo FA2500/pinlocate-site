@@ -1,4 +1,39 @@
+# Search and AI crawlers are welcome on every page except /p/: a shared place
+# lives only in its link, and that page has nothing to index.
+
+User-agent: GPTBot
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /p/
+Disallow: /ms/p/
+
 User-agent: *
 Allow: /
+Disallow: /p/
+Disallow: /ms/p/
 
 Sitemap: https://pinlocate.link/sitemap.xml

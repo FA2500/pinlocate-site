@@ -1,0 +1,40 @@
+# PinLocate
+
+> PinLocate is an Android app for saving the exact location of the houses you visit: a pin at the gate, a landmark note and photos of the gate, for each person. It shares a place to WhatsApp with Waze and Google Maps links, so anyone can find the right house. It is made in Malaysia, in English and Bahasa Melayu.
+
+## What it does
+
+- Save people (from phone contacts or by name), each with as many places as they need, labelled such as Rumah, Kedai, Rumah kampung or Kebun.
+- Pin a place with the phone's current location, a pasted Google Maps or Waze link, or a location shared in from Maps.
+- Add a landmark note (for example "green gate next to the surau") and photos of the house or gate. Photos are compressed and their location data is removed.
+- Navigate with Waze or Google Maps in one tap.
+- Share a card to WhatsApp with the photo, the landmark note, Waze and Google Maps links, and a PinLocate link that lets another PinLocate user save the place.
+- Works offline for saved places, notes and photos.
+
+## Who it's for
+
+- Families saving relatives' houses for balik kampung and Raya visits.
+- Delivery riders, home-service technicians (aircond, plumbing, repairs) and sales staff who return to the same houses and shops.
+
+## Free and Pro
+
+- Free, with no ads: unlimited people and places, pins, labels and landmark notes, up to 3 photos per place, navigation, sharing, and backup to a file with restore.
+- Pro (optional subscription, MYR 0.99/month in Malaysia after a 2-week free trial for new subscribers; prices vary by country): a visit list ordered nearest-first from where you are, visit history with notes, tags and custom fields, CSV export and import, up to 10 photos per place, and automatic backup to the user's own Google Drive.
+
+## Privacy
+
+- No account and no sign-up. PinLocate has no server: data stays on the phone, and in the user's own Google Drive only if they turn on Drive backup.
+- The developer never receives users' data. No ads, analytics or tracking in the app or on the website.
+
+## Platforms
+
+- Android, on Google Play. There is no iPhone version yet.
+
+## Links
+
+- [Home](https://pinlocate.link/): what PinLocate does, pricing and FAQ ([Bahasa Melayu](https://pinlocate.link/ms/))
+- [Guides](https://pinlocate.link/guides/): how to share an exact house location on WhatsApp, and how to save relatives' houses for balik kampung ([Panduan](https://pinlocate.link/ms/panduan/))
+- [Privacy policy](https://pinlocate.link/privacy/)
+- [Terms of service](https://pinlocate.link/terms/)
+- [Press kit](https://pinlocate.link/press/): fact sheet, logo and screenshots
+- Contact: support@pinlocate.link

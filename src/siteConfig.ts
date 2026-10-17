@@ -15,6 +15,10 @@ export const siteConfig = {
   playLive: false,
   // Play sets the real price per country; this is the Malaysian one.
   proPrice: { en: "MYR 0.99/month", ms: "MYR 0.99/bulan" },
+  // The same price as a number, for structured data.
+  proPriceMyr: "0.99",
+  // The press fact sheet's launch month.
+  launch: { en: "October 2026", ms: "Oktober 2026" },
   trialWeeks: 2,
   photoLimits: { free: 3, pro: 10 },
   features: {
@@ -28,8 +32,21 @@ export const siteConfig = {
   heroScreenshot: null as string | null,
 } as const;
 
-export function playUrl(lang: Lang): string {
-  return lang === "ms" ? `${siteConfig.playUrl}&hl=ms` : siteConfig.playUrl;
+/**
+ * The Google Play listing, tagged so Play Console shows where installs came from:
+ * utm_source=website (or sharelink from /p/) and utm_medium=[page], in Play's
+ * install referrer.
+ */
+export type PlaySource = "website" | "sharelink";
+
+export function playUrl(lang: Lang, page: string, source: PlaySource = "website"): string {
+  const referrer = encodeURIComponent(`utm_source=${source}&utm_medium=${page}`);
+  return `${siteConfig.playUrl}${lang === "ms" ? "&hl=ms" : ""}&referrer=${referrer}`;
+}
+
+/** The guides section: /guides/ in English, /ms/panduan/ in Malay. */
+export function guidesPath(lang: Lang): string {
+  return lang === "ms" ? "/ms/panduan/" : "/guides/";
 }
 
 /** The URL of [path] (such as "/privacy/") in [lang]. */

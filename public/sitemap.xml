@@ -2,32 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pinlocate.link/</loc>
+    <lastmod>2026-10-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/"/>
   </url>
   <url>
     <loc>https://pinlocate.link/ms/</loc>
+    <lastmod>2026-10-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/guides/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/panduan/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/guides/share-exact-house-location-whatsapp/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/share-exact-house-location-whatsapp/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/kongsi-lokasi-rumah-tepat-whatsapp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/share-exact-house-location-whatsapp/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/panduan/kongsi-lokasi-rumah-tepat-whatsapp/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/share-exact-house-location-whatsapp/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/kongsi-lokasi-rumah-tepat-whatsapp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/share-exact-house-location-whatsapp/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/guides/save-relatives-houses-balik-kampung/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/save-relatives-houses-balik-kampung/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/simpan-lokasi-rumah-saudara-balik-kampung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/save-relatives-houses-balik-kampung/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/panduan/simpan-lokasi-rumah-saudara-balik-kampung/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/guides/save-relatives-houses-balik-kampung/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/panduan/simpan-lokasi-rumah-saudara-balik-kampung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/guides/save-relatives-houses-balik-kampung/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/press/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/press/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/press/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/press/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/press/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/press/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/press/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/press/"/>
   </url>
   <url>
     <loc>https://pinlocate.link/privacy/</loc>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/privacy/"/>
   </url>
   <url>
     <loc>https://pinlocate.link/ms/privacy/</loc>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/privacy/"/>
   </url>
   <url>
     <loc>https://pinlocate.link/terms/</loc>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/terms/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/terms/"/>
   </url>
   <url>
     <loc>https://pinlocate.link/ms/terms/</loc>
+    <lastmod>2026-10-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/terms/"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pinlocate.link/terms/"/>
   </url>
 </urlset>

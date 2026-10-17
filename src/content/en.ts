@@ -51,7 +51,7 @@ export const en: Content = {
   },
   ui: {
     skip: "Skip to content",
-    nav: { features: "Features", how: "How it works", pricing: "Pricing", faq: "FAQ", reviews: "Reviews" },
+    nav: { features: "Features", how: "How it works", pricing: "Pricing", faq: "FAQ", reviews: "Reviews", guides: "Guides" },
     menu: "Menu",
     closeMenu: "Close menu",
     getApp: "Get the app",
@@ -60,6 +60,7 @@ export const en: Content = {
     home: "Home",
     privacy: "Privacy policy",
     terms: "Terms of service",
+    press: "Press",
     contact: "Contact",
     backHome: "Back to home",
     effective: "Effective",

@@ -55,7 +55,17 @@ for (const page of htmlFiles(OUT)) {
   }
 }
 
-console.log(`${checked} internal links and assets checked in ${htmlFiles(OUT).length} pages`);
+// The sitemap lists exactly the pages with a canonical URL (not /p/ or the 404), each with a lastmod.
+const sitemap = readFileSync(join(OUT, "sitemap.xml"), "utf8");
+const listed = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+const canonical = new Set(
+  htmlFiles(OUT).flatMap((page) => [...readFileSync(page, "utf8").matchAll(/<link rel="canonical" href="([^"]+)"/g)].map((m) => m[1])),
+);
+for (const url of canonical) if (!listed.has(url)) broken.push(`sitemap.xml: ${url} is missing`);
+for (const url of listed) if (!canonical.has(url)) broken.push(`sitemap.xml: ${url} is not a page with that canonical URL`);
+if ((sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) ?? []).length !== listed.size) broken.push("sitemap.xml: every <url> needs a <lastmod>");
+
+console.log(`${checked} internal links and assets checked in ${htmlFiles(OUT).length} pages; ${listed.size} pages in the sitemap`);
 console.log(`External links (not fetched):\n  ${[...external].sort().join("\n  ")}`);
 if (broken.length) {
   console.error(`Broken:\n  ${broken.join("\n  ")}`);

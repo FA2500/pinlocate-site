@@ -35,7 +35,7 @@ export function Hero({ lang }: { lang: Lang }) {
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-muted sm:text-xl">{c.hero.subtitle}</p>
           <div className="flex flex-wrap items-center gap-3">
-            <PlayCta lang={lang} />
+            <PlayCta lang={lang} page="home" />
             <a href="#how-it-works" className={buttonVariants({ variant: "outline", size: "lg" })}>
               {c.hero.secondary}
               <ArrowDown aria-hidden="true" />
@@ -235,7 +235,7 @@ export function FinalCta({ lang }: { lang: Lang }) {
             {c.title}
           </h2>
           <p className="text-lg opacity-90">{c.text}</p>
-          <PlayCta lang={lang} inverse />
+          <PlayCta lang={lang} page="home" inverse />
         </div>
       </Reveal>
     </section>

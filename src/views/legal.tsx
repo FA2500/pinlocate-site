@@ -16,7 +16,7 @@ export function legalMetadata(kind: Kind, lang: Lang): Metadata {
 export function LegalView({ kind, lang }: { kind: Kind; lang: Lang }) {
   return (
     <>
-      <SiteHeader lang={lang} path={`/${kind}/`} />
+      <SiteHeader lang={lang} path={`/${kind}/`} page={kind} />
       <main id="main" tabIndex={-1} className="flex-1 outline-none">
         <LegalPage lang={lang} doc={legal[kind][lang]} />
       </main>

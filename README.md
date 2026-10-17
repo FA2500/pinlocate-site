@@ -8,6 +8,8 @@ English and, under `/ms/`, Bahasa Melayu:
 | `/` | Home: features, how it works, pricing, FAQ |
 | `/privacy/` | Privacy policy |
 | `/terms/` | Terms of service |
+| `/guides/` (Malay: `/ms/panduan/`) | Guides, each a pair with its own slug per language and Article JSON-LD |
+| `/press/` | Press kit: the story in brief, a fact sheet, the logo (PNG, SVG) and 4 screenshots to download. No quotes. |
 | `/p/` | The page a shared PinLocate link opens without the app. It reads the place from the part after `#` in the browser (`src/lib/pinlocate-link.ts`), so the place never reaches the server. `noindex`, no referrer. |
 | `/404.html` | Page not found |
 
@@ -28,9 +30,19 @@ plus the sha256 hash of each inline script Next.js wrote into that page.
 | Name, email, Play link, `playLive`, Pro price, trial, photo limits, feature flags, reviews | `src/siteConfig.ts` |
 | Page copy | `src/content/en.ts`, `src/content/ms.ts` |
 | Privacy policy and terms | `src/content/legal/*.ts`, one section per entry; the section ids are link targets |
-| Open Graph images | `npm run og` redraws `public/og-en.png` and `public/og-ms.png` |
+| Guides | `src/content/guides.ts`; a new guide also needs its two route folders, its titles in `scripts/og.mjs`, and its URLs in `public/sitemap.xml`, `public/llms.txt` |
+| Press kit | `src/content/press.ts`, files in `public/press/` (screenshots from the app repo's `store/`) |
+| Open Graph images | `npm run og` redraws `public/og-en.png`, `public/og-ms.png` and one per guide in `public/og/` |
+| Sitemap, robots, llms.txt | `public/sitemap.xml` (every indexable page with its `lastmod`; `npm run links` checks it matches the pages), `public/robots.txt`, `public/llms.txt` |
 
-Set `playLive: true` when the Play listing is public: the "Coming soon" label becomes Google's badge.
+Set `playLive: true` when the Play listing is public: the "Coming soon" label becomes Google's badge. Every Play link
+is tagged for Play Console's install referrer: `&referrer=utm_source%3Dwebsite%26utm_medium%3D<page>`, and from `/p/`
+`utm_source%3Dsharelink` (`playUrl` in `src/siteConfig.ts`).
+
+Structured data (`src/lib/jsonld.tsx`): the home page has Organization, SoftwareApplication (with the free app and the
+Pro offer) and FAQPage; guides have Article. No ratings or reviews. `npm run schema` validates every built page
+against schema.org and Google's rich-result rules (`@adobe/structured-data-validator`, with a pinned copy of the
+schema.org vocabulary in `scripts/vendor/`); it runs in `check:fast`.
 Set `features.driveBackup: true` when the app ships Google Drive backup. Reviews and their nav link appear only when
 `testimonials` has real entries.
 

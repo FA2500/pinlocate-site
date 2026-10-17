@@ -38,7 +38,7 @@ export type Content = {
   meta: { home: PageMeta; link: PageMeta; ogAlt: string };
   ui: {
     skip: string;
-    nav: { features: string; how: string; pricing: string; faq: string; reviews: string };
+    nav: { features: string; how: string; pricing: string; faq: string; reviews: string; guides: string };
     menu: string;
     closeMenu: string;
     getApp: string;
@@ -47,6 +47,7 @@ export type Content = {
     home: string;
     privacy: string;
     terms: string;
+    press: string;
     contact: string;
     backHome: string;
     effective: string;

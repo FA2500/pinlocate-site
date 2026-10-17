@@ -1,7 +1,8 @@
-// Draws the 1200×630 Open Graph images (public/og-en.png, public/og-ms.png).
-// Run after changing the tagline: npm run og
+// Draws the 1200×630 Open Graph images: public/og-en.png and public/og-ms.png, and one per guide in
+// public/og/ (<guide id>-<lang>.png). Run after changing the tagline or a guide's title: npm run og
+// The guide titles here must match src/content/guides.ts (a unit test checks).
 import { chromium } from "@playwright/test";
-import { readFileSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 
 const font = readFileSync("node_modules/@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2").toString("base64");
 const icon = readFileSync("public/icons/icon-512.png").toString("base64");
@@ -11,7 +12,14 @@ const text = {
   ms: { title: "Jumpa pagar yang betul, setiap kali", sub: "Simpan pin, nota penanda dan foto pagar. Kongsi ke WhatsApp dengan pautan Waze dan Google Maps." },
 };
 
-const html = ({ title, sub }) => `<!doctype html><html><head><style>
+const guideImages = {
+  "share-location-en": { eyebrow: "Guide", title: "How to share an exact house location on WhatsApp" },
+  "share-location-ms": { eyebrow: "Panduan", title: "Cara kongsi lokasi rumah yang tepat di WhatsApp" },
+  "balik-kampung-en": { eyebrow: "Guide", title: "How to save relatives’ houses for balik kampung" },
+  "balik-kampung-ms": { eyebrow: "Panduan", title: "Cara simpan lokasi rumah saudara untuk balik kampung" },
+};
+
+const html = ({ title, sub, eyebrow }) => `<!doctype html><html><head><style>
 @font-face { font-family: J; src: url(data:font/woff2;base64,${font}) format("woff2"); font-weight: 200 800; }
 * { margin: 0; box-sizing: border-box; }
 body { width: 1200px; height: 630px; font-family: J, sans-serif; background: #0e6b62; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 72px 80px; overflow: hidden; position: relative; }
@@ -23,7 +31,7 @@ p { font-size: 30px; line-height: 1.35; opacity: .92; max-width: 920px; position
 .url { font-size: 26px; font-weight: 700; opacity: .85; }
 </style></head><body><div class="glow"></div>
 <div class="brand"><img src="data:image/png;base64,${icon}">PinLocate</div>
-<div style="display:flex;flex-direction:column;gap:22px"><h1>${title}</h1><p>${sub}</p></div>
+<div style="display:flex;flex-direction:column;gap:22px">${eyebrow ? `<p class="url">${eyebrow}</p>` : ""}<h1>${title}</h1>${sub ? `<p>${sub}</p>` : ""}</div>
 <div class="url">pinlocate.link</div></body></html>`;
 
 const browser = await chromium.launch();
@@ -33,5 +41,11 @@ for (const lang of ["en", "ms"]) {
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: `public/og-${lang}.png` });
 }
+mkdirSync("public/og", { recursive: true });
+for (const [name, text] of Object.entries(guideImages)) {
+  await page.setContent(html(text), { waitUntil: "load" });
+  await page.evaluate(() => document.fonts.ready);
+  await page.screenshot({ path: `public/og/${name}.png` });
+}
 await browser.close();
-console.log("Wrote public/og-en.png and public/og-ms.png");
+console.log("Wrote public/og-en.png, public/og-ms.png and public/og/*.png");
