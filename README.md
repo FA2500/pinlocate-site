@@ -14,6 +14,9 @@ English and, under `/ms/`, Bahasa Melayu:
 `public/.well-known/assetlinks.json` lets the app open `https://pinlocate.link/p` links (Android App Links). It lists
 the SHA-256 of the upload key and the Play App Signing key. Keep its bytes as they are.
 
+`public/.well-known/security.txt` (RFC 9116) says where to report a security problem: support@pinlocate.link. Its
+`Expires` date must stay in the future: renew it each year, before 1 October.
+
 No analytics, cookies, trackers, or scripts and fonts from other sites. The font (Plus Jakarta Sans) is self-hosted.
 After the build, `scripts/csp.mjs` gives each page a Content-Security-Policy that allows only this site's own files,
 plus the sha256 hash of each inline script Next.js wrote into that page.

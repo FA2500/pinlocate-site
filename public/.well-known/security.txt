@@ -1,0 +1,4 @@
+Contact: mailto:support@pinlocate.link
+Expires: 2027-10-01T00:00:00Z
+Preferred-Languages: en, ms
+Canonical: https://pinlocate.link/.well-known/security.txt
