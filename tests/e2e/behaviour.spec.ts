@@ -2,14 +2,14 @@ import { expect, test } from "@playwright/test";
 
 test.describe("/p/ shared place", () => {
   test("shows the place and navigation links, keeping the place when switching language", async ({ page }) => {
-    await page.goto("/p/#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan");
+    await page.goto("/p/#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan");
     await expect(page.locator("#name")).toHaveText("Rumah Tok Wan");
-    await expect(page.locator("#coords")).toHaveText("3.13048, 101.68488");
-    await expect(page.locator("#waze")).toHaveAttribute("href", "https://waze.com/ul?ll=3.130480,101.684880&navigate=yes");
-    await expect(page.locator("#maps")).toHaveAttribute("href", "https://www.google.com/maps/dir/?api=1&destination=3.130480,101.684880");
+    await expect(page.locator("#coords")).toHaveText("3.1438, 101.68482");
+    await expect(page.locator("#waze")).toHaveAttribute("href", "https://waze.com/ul?ll=3.143800,101.684820&navigate=yes");
+    await expect(page.locator("#maps")).toHaveAttribute("href", "https://www.google.com/maps/dir/?api=1&destination=3.143800,101.684820");
     await expect(page.locator("#error")).toBeHidden();
     const sw = page.locator("header [data-lang-switch]");
-    await expect(sw).toHaveAttribute("href", "/ms/p/#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan");
+    await expect(sw).toHaveAttribute("href", "/ms/p/#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan");
     await sw.click();
     await expect(page).toHaveURL(/\/ms\/p\/#v=1/);
     await expect(page.locator("#name")).toHaveText("Rumah Tok Wan");

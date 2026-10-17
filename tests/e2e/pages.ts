@@ -5,8 +5,8 @@ export const pages = [
   { path: "/ms/privacy/", name: "privacy-ms", lang: "ms" },
   { path: "/terms/", name: "terms", lang: "en" },
   { path: "/ms/terms/", name: "terms-ms", lang: "ms" },
-  { path: "/p/#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan", name: "link", lang: "en" },
-  { path: "/ms/p/#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan", name: "link-ms", lang: "ms" },
+  { path: "/p/#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan", name: "link", lang: "en" },
+  { path: "/ms/p/#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan", name: "link-ms", lang: "ms" },
   { path: "/no-such-page/", name: "404", lang: "en" },
 ] as const;
 

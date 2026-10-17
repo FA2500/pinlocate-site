@@ -42,12 +42,12 @@ export const en: Content = {
   lang: "en",
   meta: {
     home: {
-      title: "PinLocate: find the right door, every time",
+      title: "PinLocate: find the right gate, every time",
       description:
         "Save the exact pin for the people you visit, with a landmark note and photos of the gate. Share it to WhatsApp with Waze and Google Maps links.",
     },
     link: { title: "A shared place · PinLocate", description: "A place shared from PinLocate." },
-    ogAlt: "PinLocate: find the right door, every time",
+    ogAlt: "PinLocate: find the right gate, every time",
   },
   ui: {
     skip: "Skip to content",
@@ -70,7 +70,7 @@ export const en: Content = {
   },
   hero: {
     eyebrow: "For Android · English and Bahasa Melayu",
-    title: "Find the right door, every time",
+    title: "Find the right gate, every time",
     subtitle:
       "Save the exact pin for every house you visit, with a landmark note and photos of the gate. Share it to WhatsApp with Waze and Google Maps links, so anyone can find the way.",
     secondary: "See how it works",
@@ -85,14 +85,14 @@ export const en: Content = {
     landmarkHeading: "Landmark",
     landmark: "Green gate next to the surau",
     pinHeading: "Pin",
-    coords: "3.13048, 101.68488",
+    coords: "3.1438, 101.68482",
     share: "Share",
     waze: "Waze",
     maps: "Google Maps",
     chat: [
       "Tok Wan — Rumah",
       "Landmark: Green gate next to the surau",
-      "Waze: waze.com/ul?ll=3.13048,101.68488",
+      "Waze: waze.com/ul?ll=3.143800,101.684820",
       "Google Maps: google.com/maps/dir/…",
     ],
   },
@@ -271,7 +271,7 @@ export const en: Content = {
     text: "Free, with no account and no ads. Your places stay on your phone.",
   },
   footer: {
-    tagline: "Find the right door, every time.",
+    tagline: "Find the right gate, every time.",
     madeIn: "Made in Malaysia",
     trademarks:
       "Google Play, Google Maps and Waze are trademarks of Google LLC. WhatsApp is a trademark of WhatsApp LLC.",

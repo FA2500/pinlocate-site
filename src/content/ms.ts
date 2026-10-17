@@ -42,12 +42,12 @@ export const ms: Content = {
   lang: "ms",
   meta: {
     home: {
-      title: "PinLocate: sampai ke pintu yang betul, setiap kali",
+      title: "PinLocate: jumpa pagar yang betul, setiap kali",
       description:
         "Simpan pin tepat untuk orang yang anda lawati, dengan nota penanda dan foto pagar. Kongsi ke WhatsApp dengan pautan Waze dan Google Maps.",
     },
     link: { title: "Tempat yang dikongsi · PinLocate", description: "Tempat yang dikongsi dari PinLocate." },
-    ogAlt: "PinLocate: sampai ke pintu yang betul, setiap kali",
+    ogAlt: "PinLocate: jumpa pagar yang betul, setiap kali",
   },
   ui: {
     skip: "Langkau ke kandungan",
@@ -70,7 +70,7 @@ export const ms: Content = {
   },
   hero: {
     eyebrow: "Untuk Android · Bahasa Melayu dan English",
-    title: "Sampai ke pintu yang betul, setiap kali",
+    title: "Jumpa pagar yang betul, setiap kali",
     subtitle:
       "Simpan pin tepat untuk setiap rumah yang anda lawati, dengan nota penanda dan foto pagar. Kongsi ke WhatsApp dengan pautan Waze dan Google Maps, supaya sesiapa pun boleh sampai.",
     secondary: "Lihat cara guna",
@@ -85,14 +85,14 @@ export const ms: Content = {
     landmarkHeading: "Penanda",
     landmark: "Pagar hijau sebelah surau",
     pinHeading: "Pin",
-    coords: "3.13048, 101.68488",
+    coords: "3.1438, 101.68482",
     share: "Kongsi",
     waze: "Waze",
     maps: "Google Maps",
     chat: [
       "Tok Wan — Rumah",
       "Penanda: Pagar hijau sebelah surau",
-      "Waze: waze.com/ul?ll=3.13048,101.68488",
+      "Waze: waze.com/ul?ll=3.143800,101.684820",
       "Google Maps: google.com/maps/dir/…",
     ],
   },
@@ -271,7 +271,7 @@ export const ms: Content = {
     text: "Percuma, tanpa akaun dan tanpa iklan. Tempat anda kekal dalam telefon anda.",
   },
   footer: {
-    tagline: "Sampai ke pintu yang betul, setiap kali.",
+    tagline: "Jumpa pagar yang betul, setiap kali.",
     madeIn: "Buatan Malaysia",
     trademarks:
       "Google Play, Google Maps dan Waze ialah tanda dagangan Google LLC. WhatsApp ialah tanda dagangan WhatsApp LLC.",

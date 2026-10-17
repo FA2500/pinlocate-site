@@ -10,7 +10,7 @@ import { serve } from "./serve.mjs";
 const MIN = 95;
 // Scores vary between runs, most on shared CI machines: take the median of several.
 const RUNS = Number(process.env.LH_RUNS) || 3;
-const PAGES = ["/", "/privacy/", "/p/#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan"];
+const PAGES = ["/", "/privacy/", "/p/#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan"];
 // /p/ is noindex on purpose (shared places must stay out of search results), and
 // Lighthouse's SEO score counts that against it. Its other SEO checks must still pass.
 const ALLOWED = { "/p/": { seo: ["is-crawlable"] } };

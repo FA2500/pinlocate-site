@@ -7,8 +7,8 @@ const font = readFileSync("node_modules/@fontsource-variable/plus-jakarta-sans/f
 const icon = readFileSync("public/icons/icon-512.png").toString("base64");
 
 const text = {
-  en: { title: "Find the right door, every time", sub: "Save the pin, a landmark note and photos of the gate. Share to WhatsApp with Waze and Google Maps links." },
-  ms: { title: "Sampai ke pintu yang betul, setiap kali", sub: "Simpan pin, nota penanda dan foto pagar. Kongsi ke WhatsApp dengan pautan Waze dan Google Maps." },
+  en: { title: "Find the right gate, every time", sub: "Save the pin, a landmark note and photos of the gate. Share to WhatsApp with Waze and Google Maps links." },
+  ms: { title: "Jumpa pagar yang betul, setiap kali", sub: "Simpan pin, nota penanda dan foto pagar. Kongsi ke WhatsApp dengan pautan Waze dan Google Maps." },
 };
 
 const html = ({ title, sub }) => `<!doctype html><html><head><style>

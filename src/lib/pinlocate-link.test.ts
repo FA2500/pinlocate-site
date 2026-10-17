@@ -3,9 +3,9 @@ import { formatCoord, navigationLinks, parsePlaceHash } from "./pinlocate-link";
 
 describe("parsePlaceHash", () => {
   it("reads a valid link", () => {
-    expect(parsePlaceHash("#v=1&lat=3.13048&lng=101.68488&n=Rumah%20Tok%20Wan")).toEqual({
-      lat: 3.13048,
-      lng: 101.68488,
+    expect(parsePlaceHash("#v=1&lat=3.14380&lng=101.68482&n=Rumah%20Tok%20Wan")).toEqual({
+      lat: 3.14380,
+      lng: 101.68482,
       name: "Rumah Tok Wan",
     });
   });
@@ -60,14 +60,14 @@ describe("parsePlaceHash", () => {
 describe("formatCoord and navigationLinks", () => {
   it("trims trailing zeros", () => {
     expect(formatCoord(3.1)).toBe("3.1");
-    expect(formatCoord(101.68488)).toBe("101.68488");
+    expect(formatCoord(101.68482)).toBe("101.68482");
     expect(formatCoord(-6)).toBe("-6");
   });
 
   it("builds Waze and Google Maps links with 6 decimals", () => {
-    expect(navigationLinks({ lat: 3.13048, lng: 101.68488, name: "" })).toEqual({
-      waze: "https://waze.com/ul?ll=3.130480,101.684880&navigate=yes",
-      maps: "https://www.google.com/maps/dir/?api=1&destination=3.130480,101.684880",
+    expect(navigationLinks({ lat: 3.14380, lng: 101.68482, name: "" })).toEqual({
+      waze: "https://waze.com/ul?ll=3.143800,101.684820&navigate=yes",
+      maps: "https://www.google.com/maps/dir/?api=1&destination=3.143800,101.684820",
     });
   });
 });
