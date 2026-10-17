@@ -14,7 +14,7 @@ export const privacyMs: LegalDoc = {
       title: "Ringkasnya",
       html: `
 <ul>
-  <li>PinLocate tiada pelayan dan tiada akaun. Orang, tempat, nota dan foto anda disimpan hanya pada telefon anda.</li>
+  <li>PinLocate tiada pelayan dan tiada akaun. Orang, tempat, nota dan foto anda disimpan pada telefon anda, dan dalam Google Drive anda sendiri jika anda menghidupkan sandaran Drive.</li>
   <li>Kami, pembangun aplikasi, tidak pernah menerima data anda. Tiada iklan, tiada analitik dan tiada penjejakan, dalam aplikasi atau di laman web ini.</li>
   <li>Data keluar dari telefon anda hanya apabila anda berkongsi, membuat sandaran, atau dalam beberapa keadaan yang disenaraikan di bawah.</li>
 </ul>
@@ -42,7 +42,8 @@ export const privacyMs: LegalDoc = {
   <tr><th>Kebenaran</th><th>Sebab</th></tr>
   <tr><td>Lokasi (hanya semasa aplikasi digunakan)</td><td>Untuk pin tempat anda berdiri, dan untuk menyusun senarai lawatan dari lokasi anda. PinLocate tidak pernah menggunakan lokasi di latar belakang.</td></tr>
   <tr><td>Kenalan (pilihan)</td><td>Untuk membaca nombor telefon kenalan yang anda pautkan kepada seseorang, supaya pautan itu boleh dipulihkan jika kenalan berubah. PinLocate menerangkan perkara ini sebelum meminta. Anda boleh memautkan kenalan tanpanya, dan boleh menambah orang dengan menaip nama mereka.</td></tr>
-  <tr><td>Internet</td><td>Untuk membuka pautan peta pendek (lihat di bawah).</td></tr>
+  <tr><td>Internet</td><td>Untuk membuka pautan peta pendek, dan untuk membuat sandaran ke Google Drive anda jika anda pilih (lihat di bawah).</td></tr>
+      <tr><td>Keadaan rangkaian</td><td>Untuk menyemak Wi-Fi dan Penjimat Data sebelum sandaran Drive automatik. Android tidak meminta kebenaran ini.</td></tr>
 </table></div>
 <p>Foto dan fail dipilih menggunakan pemilih Android sendiri, jadi PinLocate tidak memerlukan kebenaran storan.</p>
 `,
@@ -66,6 +67,8 @@ export const privacyMs: LegalDoc = {
   <li><strong>Fail sandaran:</strong> Simpan sandaran atau Kongsi sandaran membuat satu fail .zip dengan semua orang, tempat, nota dan foto anda. Fail ini tidak disulitkan. Ia hanya pergi ke tempat yang anda simpan atau hantar.</li>
   <li><strong>CSV (Pro):</strong> hamparan orang, nombor telefon, tempat, nota, tag dan medan, tanpa foto. Fail ini tidak disulitkan dan hanya pergi ke tempat yang anda simpan atau hantar.</li>
 </ul>
+    <h3>Sandaran Google Drive</h3>
+    <p>Jika anda menyambung Google Drive dalam Sandaran &amp; pemulihan, PinLocate memuat naik fail sandaran .zip yang sama ke folder tersembunyi dalam Google Drive anda sendiri: apabila anda ketik Sandar sekarang, atau, dengan Pro dan Sandar secara automatik dihidupkan, semasa anda menggunakan aplikasi (apabila ia dibuka atau kembali ke skrin, dan kira-kira 2 minit selepas sesuatu perubahan), paling kerap sekali sehari dan hanya jika ada perubahan. Sandaran automatik hanya menggunakan Wi-Fi kecuali anda membenarkan data mudah alih, dan menunggu semasa Penjimat Data dihidupkan pada sambungan bermeter. Keluar dari aplikasi menghentikan muat naik; ia dicuba semula kali seterusnya. Muat naik dihantar melalui HTTPS kepada Google; fail .zip itu sendiri tidak disulitkan, dan ia menggunakan storan Drive anda. PinLocate hanya meminta akses kepada foldernya sendiri daripada Google, jadi ia tidak boleh melihat fail anda yang lain, dan ia menyimpan 3 sandaran terbaharu. Pada telefon anda, ia menyimpan akaun Google yang disambungkan (alamat e-melnya, yang diberikan oleh log masuk Google kepada aplikasi). Pemulihan dari Drive boleh dibuat dengan atau tanpa Pro. Putuskan sambungan membuang akses PinLocate; sandaran kekal dalam Drive anda sehingga anda memadamnya (lihat Memadam data anda). Tiada apa-apa dihantar kepada pembangun.</p>
 <h3>Sandaran Android</h3>
 <p>Jika sandaran Google dihidupkan pada telefon anda, Android menyandarkan pangkalan data PinLocate (orang, tempat, nota dan tetapan, tetapi bukan foto) ke akaun Google anda sendiri. Android menyulitkan sandaran ini dengan kunci skrin anda, dan PinLocate hanya membenarkannya apabila penyulitan itu tersedia. Apabila anda berpindah ke telefon baharu melalui kabel atau Wi-Fi, foto turut disalin. Anda boleh mematikannya dalam tetapan sandaran telefon.</p>
 <h3>Pembelian</h3>
@@ -94,7 +97,7 @@ export const privacyMs: LegalDoc = {
       id: "deleting",
       title: "Memadam data anda",
       html: `
-<p>Padam seseorang atau sesuatu tempat dalam aplikasi dan ia dibuang dari telefon anda, bersama fotonya. Menyahpasang PinLocate memadam semua yang disimpannya. Fail sandaran dan CSV yang anda simpan atau hantar ke tempat lain adalah milik anda untuk dipadam. Sandaran Android dalam akaun Google anda diuruskan melalui tetapan akaun Google anda.</p>
+<p>Padam seseorang atau sesuatu tempat dalam aplikasi dan ia dibuang dari telefon anda, bersama fotonya. Menyahpasang PinLocate memadam semua yang disimpannya. Fail sandaran dan CSV yang anda simpan atau hantar ke tempat lain adalah milik anda untuk dipadam. Untuk memadam sandaran PinLocate dari Google Drive, buka PinLocate, pergi ke Tetapan, kemudian Sandaran &amp; pemulihan, dan ketik Padam sandaran Drive: ia memadam semua sandaran PinLocate dalam Drive anda dan kemudian memutuskan sambungan. Anda juga boleh melakukannya dari Google Drive: pergi ke Tetapan, kemudian Urus aplikasi, cari PinLocate dan pilih Padam data aplikasi tersembunyi. Sandaran Android dalam akaun Google anda diuruskan melalui tetapan akaun Google anda.</p>
 `,
     },
     {

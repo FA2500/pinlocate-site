@@ -14,7 +14,7 @@ export const privacyEn: LegalDoc = {
       title: "The short version",
       html: `
 <ul>
-  <li>PinLocate has no server and no account. Your people, places, notes and photos are stored only on your phone.</li>
+  <li>PinLocate has no server and no account. Your people, places, notes and photos are stored on your phone, and in your own Google Drive if you turn on Drive backup.</li>
   <li>We, the developer, never receive your data. There are no ads, no analytics and no tracking, in the app or on this website.</li>
   <li>Data leaves your phone only when you share it, when you back it up, or in the few cases listed below.</li>
 </ul>
@@ -42,7 +42,8 @@ export const privacyEn: LegalDoc = {
   <tr><th>Permission</th><th>Why</th></tr>
   <tr><td>Location (only while you use the app)</td><td>To pin where you are standing, and to order a visit list from where you are. PinLocate never uses location in the background.</td></tr>
   <tr><td>Contacts (optional)</td><td>To read the phone number of a contact you link to a person, so the link can be restored if the contact changes. PinLocate explains this before asking. You can link contacts without it, and you can add people by typing their names.</td></tr>
-  <tr><td>Internet</td><td>To open short map links (see below).</td></tr>
+  <tr><td>Internet</td><td>To open short map links, and to back up to your Google Drive if you choose (see below).</td></tr>
+      <tr><td>Network state</td><td>To check for Wi-Fi and Data Saver before an automatic Drive backup. Android does not ask for this one.</td></tr>
 </table></div>
 <p>Photos and files are chosen with Android's own picker, so PinLocate needs no storage permission.</p>
 `,
@@ -66,6 +67,8 @@ export const privacyEn: LegalDoc = {
   <li><strong>Backup file:</strong> Save backup or Share backup creates one .zip with all your people, places, notes and photos. It is not encrypted. It goes only where you save or send it.</li>
   <li><strong>CSV (Pro):</strong> a spreadsheet of people, phone numbers, places, notes, tags and fields, without photos. It is not encrypted and goes only where you save or send it.</li>
 </ul>
+    <h3>Google Drive backup</h3>
+    <p>If you connect Google Drive in Backup &amp; restore, PinLocate uploads the same backup .zip to a hidden folder in your own Google Drive: when you tap Back up now, or, with Pro and Back up automatically turned on, while you use the app (when it opens or comes back to the screen, and about 2 minutes after a change), at most once a day and only if something changed. Automatic backups use Wi-Fi only unless you allow mobile data, and wait while Data Saver is on over a metered connection. Leaving the app stops an upload; it is tried again next time. The upload goes over HTTPS to Google; the .zip itself is not encrypted, and it counts against your Drive storage. PinLocate asks Google only for access to its own folder, so it cannot see your other files, and it keeps the newest 3 backups. On your phone it stores which Google account is connected (its email address, which Google sign-in gives the app). Restoring from Drive works with or without Pro. Disconnect removes PinLocate's access; the backups stay in your Drive until you delete them (see Deleting your data). Nothing is sent to the developer.</p>
 <h3>Android backup</h3>
 <p>If Google backup is turned on for your phone, Android backs up PinLocate's database (people, places, notes and settings, but not photos) to your own Google account. Android encrypts this backup with your screen lock, and PinLocate allows it only when that encryption is available. When you move to a new phone with a cable or Wi-Fi transfer, the photos are copied too. You can turn this off in your phone's backup settings.</p>
 <h3>Purchases</h3>
@@ -94,7 +97,7 @@ export const privacyEn: LegalDoc = {
       id: "deleting",
       title: "Deleting your data",
       html: `
-<p>Delete a person or place in the app and it is removed from your phone, together with its photos. Uninstalling PinLocate deletes everything it stored. Backup and CSV files you saved or sent elsewhere are yours to delete. Android backups in your Google account are managed in your Google account settings.</p>
+<p>Delete a person or place in the app and it is removed from your phone, together with its photos. Uninstalling PinLocate deletes everything it stored. Backup and CSV files you saved or sent elsewhere are yours to delete. To delete PinLocate's backups from Google Drive, open PinLocate, go to Settings, then Backup &amp; restore, and tap Delete Drive backups: it deletes every PinLocate backup in your Drive and then disconnects. You can also do it from Google Drive: go to Settings, then Manage apps, find PinLocate and choose Delete hidden app data. Android backups in your Google account are managed in your Google account settings.</p>
 `,
     },
     {

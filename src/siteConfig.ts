@@ -19,7 +19,7 @@ export const siteConfig = {
   photoLimits: { free: 3, pro: 10 },
   features: {
     // true once the app's drive-backup branch ships.
-    driveBackup: false,
+    driveBackup: true,
   },
   socialLinks: [] as SocialLink[],
   // Real reviews only. The reviews section and its nav link appear when this has entries.
