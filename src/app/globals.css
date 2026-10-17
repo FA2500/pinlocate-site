@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Brand teal from the app, zinc neutrals. Light or dark follows the system. */
+:root {
+  --background: #ffffff;
+  --foreground: #18181b; /* zinc-900 */
+  --muted: #52525b; /* zinc-600 */
+  --surface: #fafafa; /* zinc-50 */
+  --surface-2: #f4f4f5; /* zinc-100 */
+  --border: #e4e4e7; /* zinc-200 */
+  --brand: #0e6b62;
+  --brand-foreground: #ffffff;
+  --brand-soft: #e3f1ef;
+  --brand-strong: #0a524b;
+  --glow: rgb(14 107 98 / 0.28);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090b; /* zinc-950 */
+    --foreground: #fafafa;
+    --muted: #a1a1aa; /* zinc-400 */
+    --surface: #18181b;
+    --surface-2: #27272a;
+    --border: #3f3f46; /* zinc-700 */
+    --brand: #63c7b9;
+    --brand-foreground: #04201c;
+    --brand-soft: #12302c;
+    --brand-strong: #8dd8cd;
+    --glow: rgb(99 199 185 / 0.22);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-strong: var(--brand-strong);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-wrap: break-word;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+/* Legal pages: tables scroll inside their own box on narrow screens. */
+.prose .table {
+  display: block; /* not Tailwind's "table" utility */
+  overflow-x: auto;
+}
+.prose table {
+  margin-block: 0;
+  min-width: 28rem;
+}
+
+@media print {
+  html {
+    font-size: 11pt;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .prose a[href^="http"]::after,
+  .prose a[href^="mailto:"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
+  .prose h2 {
+    break-after: avoid;
+  }
+  .prose table {
+    min-width: 0;
+  }
+}
+
+/* The phone mockup floats gently; the drawer slides in. Both stop for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-float {
+    animation: float 7s ease-in-out infinite;
+  }
+  .hero-float-late {
+    animation: float 7s ease-in-out 1.2s infinite;
+  }
+  .drawer[data-state="open"] {
+    animation: drawer-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .drawer-overlay[data-state="open"] {
+    animation: fade-in 220ms ease-out;
+  }
+}
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
