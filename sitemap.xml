@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pinlocate.link/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/privacy/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/privacy/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/terms/"/>
+  </url>
+  <url>
+    <loc>https://pinlocate.link/ms/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pinlocate.link/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/terms/"/>
+  </url>
+</urlset>

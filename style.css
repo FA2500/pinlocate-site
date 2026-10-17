@@ -1,0 +1,43 @@
+:root {
+  --bg: #f6f8f7; --fg: #18211f; --muted: #55635f; --line: #d5dfdc;
+  --accent: #0e6b62; --on-accent: #ffffff; --tint: #e3efec; --warn-bg: #fdf1dc; --warn-fg: #6b4300;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111816; --fg: #e3ebe9; --muted: #9fb1ad; --line: #2b3734;
+    --accent: #63c7b9; --on-accent: #062a26; --tint: #1b2624; --warn-bg: #3a2c12; --warn-fg: #f3d9a8;
+  }
+}
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: 0 max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left));
+}
+.top, main, footer { max-width: 42rem; margin: 0 auto; }
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 20px 0 8px; }
+.brand { font-weight: 700; color: var(--fg); text-decoration: none; }
+main { padding-top: 16px; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 8px; text-wrap: balance; overflow-wrap: anywhere; }
+h2 { font-size: 1.25rem; margin: 2em 0 0.4em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 0.3em; }
+p, li { max-width: 65ch; }
+a { color: var(--accent); }
+code { font-size: 0.9em; overflow-wrap: anywhere; }
+.lede { font-size: 1.1rem; }
+.meta, .muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+.eyebrow { color: var(--muted); margin: 0; font-size: 0.95rem; }
+.draft { background: var(--warn-bg); color: var(--warn-fg); padding: 8px 12px; border-radius: 8px; font-weight: 600; }
+.notice { background: var(--warn-bg); color: var(--warn-fg); padding: 10px 14px; border-radius: 8px; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.button {
+  display: inline-block; min-height: 48px; box-sizing: border-box; padding: 12px 20px; border-radius: 24px;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none;
+}
+.button.secondary { background: var(--tint); color: var(--accent); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }

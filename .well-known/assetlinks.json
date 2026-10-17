@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fac.pinlocate",
+      "sha256_cert_fingerprints": [
+        "95:A8:28:6C:8F:D5:94:1D:15:88:52:FD:80:75:2E:FE:62:B8:C9:C3:87:D9:53:FD:D9:C9:D8:44:0D:1F:A5:DD"
+      ]
+    }
+  }
+]

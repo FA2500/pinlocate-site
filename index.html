@@ -3,32 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PinLocate</title>
-<meta name="description" content="PinLocate saves the exact locations of the people you visit, with a landmark note and a photo of the gate.">
-<style>
-  :root { --bg: #f6f8f7; --fg: #18211f; --muted: #55635f; --accent: #0e6b62; color-scheme: light dark; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #111816; --fg: #e3ebe9; --muted: #9fb1ad; --accent: #63c7b9; }
-  }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    padding: 48px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
-  }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
-  p { max-width: 65ch; }
-  .muted { color: var(--muted); }
-  a { color: var(--accent); }
-</style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>PinLocate: save the exact location of the people you visit</title>
+<meta name="description" content="PinLocate saves the exact locations of the people you visit, with a landmark note and a photo of the gate, and shares them to WhatsApp.">
+<link rel="canonical" href="https://pinlocate.link/">
+<link rel="alternate" hreflang="en" href="https://pinlocate.link/">
+<link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/">
+<link rel="alternate" hreflang="x-default" href="https://pinlocate.link/">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<header class="top">
+  <a class="brand" href="/">PinLocate</a>
+  <a class="switch" href="/ms/" hreflang="ms" lang="ms">Bahasa Melayu</a>
+</header>
 <main>
-  <h1>PinLocate</h1>
-  <p>Save the exact location of the people you visit, with a landmark note and a photo of the house or gate. Share it to WhatsApp in one tap. Everything stays on your phone.</p>
-  <p lang="ms" class="muted">Simpan lokasi tepat orang yang anda lawati, dengan nota penanda dan foto rumah atau pagar. Kongsi ke WhatsApp dengan satu ketikan. Semuanya kekal dalam telefon anda.</p>
-  <p><a href="privacy/">Privacy policy</a> · <a href="privacy/#ms" lang="ms">Polisi privasi</a></p>
-  <p class="muted">Contact: <a href="mailto:afc25000@gmail.com">afc25000@gmail.com</a></p>
+<h1>PinLocate</h1>
+<p class="lede">Save the exact location of the people you visit: the pin, a landmark note and a photo of the house or gate. Share it to WhatsApp with Waze and Google Maps links, so anyone can find the door.</p>
+<ul>
+  <li>Pin where you are standing, or paste a Google Maps or Waze link.</li>
+  <li>Add a landmark note, such as “green gate next to the surau”, and photos of the gate.</li>
+  <li>Share a place to WhatsApp in one tap. Family can open it in Waze or Google Maps, or save it in their own PinLocate.</li>
+  <li>With Pro: plan a visit list for the day, keep tags, fields and visit history, and export to a spreadsheet.</li>
+  <li>No account and no ads. Your places stay on your phone.</li>
+</ul>
+<p><a class="button" href="https://play.google.com/store/apps/details?id=com.fac.pinlocate">Get it on Google Play</a></p>
+<p class="muted">Free to use, with an optional Pro subscription. Android only for now.</p>
+<p><a href="/privacy/">Privacy policy</a> · <a href="/terms/">Terms of service</a></p>
+<p>Contact: <a href="mailto:support@pinlocate.link">support@pinlocate.link</a></p>
 </main>
+<footer>
+  <a href="/privacy/">Privacy policy</a> ·
+  <a href="/terms/">Terms of service</a> ·
+  Contact: <a href="mailto:support@pinlocate.link">support@pinlocate.link</a>
+</footer>
 </body>
 </html>

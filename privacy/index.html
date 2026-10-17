@@ -3,167 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
 <title>PinLocate Privacy Policy</title>
-<meta name="description" content="How the PinLocate Android app handles your data. Polisi privasi PinLocate.">
-<style>
-  :root {
-    --bg: #f6f8f7; --fg: #18211f; --muted: #55635f; --line: #d5dfdc; --accent: #0e6b62;
-    color-scheme: light dark;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #111816; --fg: #e3ebe9; --muted: #9fb1ad; --line: #2b3734; --accent: #63c7b9; }
-  }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    padding: 32px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
-  }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 4px; }
-  h2 { font-size: 1.25rem; margin: 2.2em 0 0.4em; }
-  h3 { font-size: 1.05rem; margin: 1.6em 0 0.3em; }
-  p, li { max-width: 65ch; }
-  .meta { color: var(--muted); margin: 0 0 1.5em; }
-  nav a, a { color: var(--accent); }
-  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
-  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-weight: 600; }
-  .table { overflow-x: auto; }
-  .lang { border-top: 2px solid var(--line); margin-top: 3em; padding-top: 1em; }
-</style>
+<meta name="description" content="How the PinLocate Android app and this website handle your data.">
+<link rel="canonical" href="https://pinlocate.link/privacy/">
+<link rel="alternate" hreflang="en" href="https://pinlocate.link/privacy/">
+<link rel="alternate" hreflang="ms" href="https://pinlocate.link/ms/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://pinlocate.link/privacy/">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<header class="top">
+  <a class="brand" href="/">PinLocate</a>
+  <a class="switch" href="/ms/privacy/" hreflang="ms" lang="ms">Bahasa Melayu</a>
+</header>
 <main>
-  <h1>PinLocate Privacy Policy</h1>
-  <p class="meta">Effective 15 October 2026 · <a href="#ms">Bahasa Melayu</a> · <a href="../">PinLocate</a></p>
+<h1>Privacy Policy</h1>
+<p class="meta">Effective 17 October 2026</p>
+<p>PinLocate saves the locations of the people you visit: a pin, a landmark note and a photo of the house or gate. This policy explains what happens to that information, in the app and on this website.</p>
 
-  <section lang="en">
-    <p>PinLocate saves the locations of the people you visit: a pin, a landmark note and a photo of the house or gate. This policy explains what happens to that information.</p>
+<h2>The short version</h2>
+<ul>
+  <li>PinLocate has no server and no account. Your people, places, notes and photos are stored only on your phone.</li>
+  <li>We, the developer, never receive your data. There are no ads, no analytics and no tracking, in the app or on this website.</li>
+  <li>Data leaves your phone only when you share it, when you back it up, or in the few cases listed below.</li>
+</ul>
 
-    <h2>The short version</h2>
-    <ul>
-      <li>PinLocate has no server and no account. Your people, places, notes and photos are stored only on your phone.</li>
-      <li>We, the developer, never receive your data. There are no ads, no analytics and no tracking.</li>
-      <li>Data leaves your phone only when you share it, when you back it up, or in the few cases listed below.</li>
-    </ul>
+<h2>What PinLocate stores on your phone</h2>
+<ul>
+  <li>People you add: their names, and, if you link a phone contact, that contact's ID and phone number.</li>
+  <li>Places: coordinates, how accurate the GPS fix was, label, landmark note, and any tags and fields you add.</li>
+  <li>Photos you choose for a place. They are compressed and their EXIF data, including any GPS location, is removed.</li>
+  <li>Visits you log, with their dates and notes, and your current visit list.</li>
+  <li>App settings, such as your language.</li>
+</ul>
+<p>All of this is kept in the app's private storage, which other apps cannot read.</p>
 
-    <h2>What PinLocate stores on your phone</h2>
-    <ul>
-      <li>People you add: their names, and, if you link a phone contact, that contact's ID and phone number.</li>
-      <li>Places: coordinates, how accurate the GPS fix was, label, landmark note, and any tags and fields you add.</li>
-      <li>Photos you choose for a place. They are compressed and their EXIF data, including any GPS location, is removed.</li>
-      <li>Visits you log, with their dates and notes, and your current visit list.</li>
-      <li>App settings, such as your language.</li>
-    </ul>
-    <p>All of this is kept in the app's private storage, which other apps cannot read.</p>
+<h2>Permissions</h2>
+<div class="table"><table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td>Location (only while you use the app)</td><td>To pin where you are standing, and to order a visit list from where you are. PinLocate never uses location in the background.</td></tr>
+  <tr><td>Contacts (optional)</td><td>To read the phone number of a contact you link to a person, so the link can be restored if the contact changes. PinLocate explains this before asking. You can link contacts without it, and you can add people by typing their names.</td></tr>
+  <tr><td>Internet</td><td>To open short map links (see below).</td></tr>
+</table></div>
+<p>Photos and files are chosen with Android's own picker, so PinLocate needs no storage permission.</p>
 
-    <h2>Permissions</h2>
-    <div class="table"><table>
-      <tr><th>Permission</th><th>Why</th></tr>
-      <tr><td>Location (only while you use the app)</td><td>To pin where you are standing, and to order a visit list from where you are. PinLocate never uses location in the background.</td></tr>
-      <tr><td>Contacts (optional)</td><td>To read the phone number of a contact you link to a person, so the link can be restored if the contact changes. PinLocate explains this before asking. You can link contacts without it, and you can add people by typing their names.</td></tr>
-      <tr><td>Internet</td><td>To open short map links (see below).</td></tr>
-    </table></div>
-    <p>Photos and files are chosen with Android's own picker, so PinLocate needs no storage permission.</p>
+<h2>When data leaves your phone</h2>
+<h3>When you share or navigate</h3>
+<ul>
+  <li><strong>Share card:</strong> when you tap Share, the place's name, coordinates, note and photo go to the app you pick, such as WhatsApp. Unless you turn it off in Settings, the card ends with a PinLocate link that holds the place's name and coordinates (see The PinLocate link below). Before your first share, PinLocate reminds you that the card shows a home.</li>
+  <li><strong>Navigate:</strong> the coordinates go to Waze or Google Maps, or to their website if the app is not installed.</li>
+</ul>
+<h3>When you read a map link</h3>
+<ul>
+  <li><strong>Short links:</strong> a link such as maps.app.goo.gl is opened once over the internet, so PinLocate can read the location it points to. Only the link itself is sent, to Google or Waze.</li>
+  <li><strong>Place name lookup:</strong> when a Google Maps link has a place name but no coordinates, the name and address in the link are looked up with your phone's built-in geocoder, which sends them to Google.</li>
+</ul>
+<h3>Backups and exports you make</h3>
+<ul>
+  <li><strong>Backup file:</strong> Save backup or Share backup creates one .zip with all your people, places, notes and photos. It is not encrypted. It goes only where you save or send it.</li>
+  <li><strong>CSV (Pro):</strong> a spreadsheet of people, phone numbers, places, notes, tags and fields, without photos. It is not encrypted and goes only where you save or send it.</li>
+</ul>
+<h3>Android backup</h3>
+<p>If Google backup is turned on for your phone, Android backs up PinLocate's database (people, places, notes and settings, but not photos) to your own Google account. Android encrypts this backup with your screen lock, and PinLocate allows it only when that encryption is available. When you move to a new phone with a cable or Wi-Fi transfer, the photos are copied too. You can turn this off in your phone's backup settings.</p>
+<h3>Purchases</h3>
+<p>PinLocate Pro is a subscription bought through Google Play. Google handles the payment; PinLocate only learns whether your subscription is active, and remembers that answer on your phone so Pro keeps working offline. Nothing about your purchase is sent to the developer. You can cancel anytime in Google Play.</p>
 
-    <h2>When data leaves your phone</h2>
-    <h3>When you share or navigate</h3>
-    <ul>
-      <li><strong>Share card:</strong> when you tap Share, the place's name, coordinates, note and photo go to the app you pick, such as WhatsApp. Before your first share, PinLocate reminds you that the card shows a home.</li>
-      <li><strong>Navigate:</strong> the coordinates go to Waze or Google Maps, or to their website if the app is not installed.</li>
-    </ul>
-    <h3>When you read a map link</h3>
-    <ul>
-      <li><strong>Short links:</strong> a link such as maps.app.goo.gl is opened once over the internet, so PinLocate can read the location it points to. Only the link itself is sent, to Google or Waze.</li>
-      <li><strong>Place name lookup:</strong> when a Google Maps link has a place name but no coordinates, the name and address in the link are looked up with your phone's built-in geocoder, which sends them to Google.</li>
-    </ul>
-    <h3>Backups and exports you make</h3>
-    <ul>
-      <li><strong>Backup file:</strong> Save backup or Share backup creates one .zip with all your people, places, notes and photos. It is not encrypted. It goes only where you save or send it.</li>
-      <li><strong>CSV (Pro):</strong> a spreadsheet of people, phone numbers, places, notes, tags and fields, without photos. It is not encrypted and goes only where you save or send it.</li>
-    </ul>
-    <h3>Android backup</h3>
-    <p>If Google backup is turned on for your phone, Android backs up PinLocate's database (people, places, notes and settings, but not photos) to your own Google account. Android encrypts this backup with your screen lock, and PinLocate allows it only when that encryption is available. When you move to a new phone with a cable or Wi-Fi transfer, the photos are copied too. You can turn this off in your phone's backup settings.</p>
-    <h3>Purchases</h3>
-    <p>PinLocate Pro is a subscription bought through Google Play. Google handles the payment; PinLocate only learns whether your subscription is active, and remembers that answer on your phone so Pro keeps working offline. Nothing about your purchase is sent to the developer. You can cancel anytime in Google Play.</p>
+<h2 id="link">The PinLocate link</h2>
+<p>A shared place can carry a link such as <code>pinlocate.link/p#v=1&amp;lat=…&amp;lng=…&amp;n=…</code>. The place's coordinates and name sit after the <code>#</code>. Browsers never send that part to a website, so it never reaches the server.</p>
+<ul>
+  <li><strong>With PinLocate installed,</strong> the link opens the app, which checks the coordinates and name and offers to save the place. Nothing is sent anywhere.</li>
+  <li><strong>Without the app,</strong> the link opens a page on this website. The page reads the place from the link inside your browser and shows its name, with buttons for Waze, Google Maps and Google Play. Those buttons send the coordinates only to the service you tap.</li>
+</ul>
 
-    <h2>Deleting your data</h2>
-    <p>Delete a person or place in the app and it is removed from your phone, together with its photos. Uninstalling PinLocate deletes everything it stored. Backup and CSV files you saved or sent elsewhere are yours to delete. Android backups in your Google account are managed in your Google account settings.</p>
+<h2>This website</h2>
+<p>pinlocate.link has no analytics, cookies, trackers, or scripts or fonts from other websites. It is hosted by GitHub Pages. Like any web host, GitHub receives your IP address and the address of the page you open (without the part after <code>#</code>), and may keep them in its logs; see GitHub's privacy statement. The developer does not see these logs.</p>
 
-    <h2>Children</h2>
-    <p>PinLocate is not directed at children under 13.</p>
+<h2>Deleting your data</h2>
+<p>Delete a person or place in the app and it is removed from your phone, together with its photos. Uninstalling PinLocate deletes everything it stored. Backup and CSV files you saved or sent elsewhere are yours to delete. Android backups in your Google account are managed in your Google account settings.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy changes, the new version is posted on this page with a new effective date.</p>
+<h2>Children</h2>
+<p>PinLocate is not directed at children under 13.</p>
 
-    <h2>Contact</h2>
-    <p>Questions about this policy: <a href="mailto:afc25000@gmail.com">afc25000@gmail.com</a></p>
-  </section>
+<h2>Changes</h2>
+<p>If this policy changes, the new version is posted on this page with a new effective date.</p>
 
-  <section lang="ms" id="ms" class="lang">
-    <h1>Polisi Privasi PinLocate</h1>
-    <p class="meta">Berkuat kuasa 15 Oktober 2026</p>
-    <p>PinLocate menyimpan lokasi orang yang anda lawati: pin, nota penanda dan foto rumah atau pagar. Polisi ini menerangkan apa yang berlaku kepada maklumat tersebut.</p>
-
-    <h2>Ringkasnya</h2>
-    <ul>
-      <li>PinLocate tiada pelayan dan tiada akaun. Orang, tempat, nota dan foto anda disimpan hanya pada telefon anda.</li>
-      <li>Kami, pembangun aplikasi, tidak pernah menerima data anda. Tiada iklan, tiada analitik dan tiada penjejakan.</li>
-      <li>Data keluar dari telefon anda hanya apabila anda berkongsi, membuat sandaran, atau dalam beberapa keadaan yang disenaraikan di bawah.</li>
-    </ul>
-
-    <h2>Apa yang PinLocate simpan pada telefon anda</h2>
-    <ul>
-      <li>Orang yang anda tambah: nama mereka, dan jika anda memautkan kenalan telefon, ID kenalan dan nombor telefonnya.</li>
-      <li>Tempat: koordinat, ketepatan GPS, label, nota penanda, serta tag dan medan yang anda tambah.</li>
-      <li>Foto yang anda pilih untuk sesuatu tempat. Foto dimampatkan dan data EXIF, termasuk lokasi GPS, dibuang.</li>
-      <li>Lawatan yang anda catat, dengan tarikh dan nota, serta senarai lawatan semasa anda.</li>
-      <li>Tetapan aplikasi, seperti bahasa.</li>
-    </ul>
-    <p>Semua ini disimpan dalam storan peribadi aplikasi, yang tidak boleh dibaca oleh aplikasi lain.</p>
-
-    <h2>Kebenaran</h2>
-    <div class="table"><table>
-      <tr><th>Kebenaran</th><th>Sebab</th></tr>
-      <tr><td>Lokasi (hanya semasa aplikasi digunakan)</td><td>Untuk pin tempat anda berdiri, dan untuk menyusun senarai lawatan dari lokasi anda. PinLocate tidak pernah menggunakan lokasi di latar belakang.</td></tr>
-      <tr><td>Kenalan (pilihan)</td><td>Untuk membaca nombor telefon kenalan yang anda pautkan kepada seseorang, supaya pautan itu boleh dipulihkan jika kenalan berubah. PinLocate menerangkan perkara ini sebelum meminta. Anda boleh memautkan kenalan tanpanya, dan boleh menambah orang dengan menaip nama mereka.</td></tr>
-      <tr><td>Internet</td><td>Untuk membuka pautan peta pendek (lihat di bawah).</td></tr>
-    </table></div>
-    <p>Foto dan fail dipilih menggunakan pemilih Android sendiri, jadi PinLocate tidak memerlukan kebenaran storan.</p>
-
-    <h2>Bila data keluar dari telefon anda</h2>
-    <h3>Apabila anda berkongsi atau menavigasi</h3>
-    <ul>
-      <li><strong>Kad kongsi:</strong> apabila anda ketik Kongsi, nama tempat, koordinat, nota dan foto dihantar ke aplikasi yang anda pilih, seperti WhatsApp. Sebelum perkongsian pertama, PinLocate mengingatkan bahawa kad itu menunjukkan sebuah rumah.</li>
-      <li><strong>Navigasi:</strong> koordinat dihantar ke Waze atau Google Maps, atau ke laman web mereka jika aplikasi tidak dipasang.</li>
-    </ul>
-    <h3>Apabila anda membaca pautan peta</h3>
-    <ul>
-      <li><strong>Pautan pendek:</strong> pautan seperti maps.app.goo.gl dibuka sekali melalui internet, supaya PinLocate dapat membaca lokasi yang ditunjukkannya. Hanya pautan itu dihantar, kepada Google atau Waze.</li>
-      <li><strong>Carian nama tempat:</strong> apabila pautan Google Maps mempunyai nama tempat tetapi tiada koordinat, nama dan alamat dalam pautan itu dicari menggunakan pengekod geo terbina dalam telefon anda, yang menghantarnya kepada Google.</li>
-    </ul>
-    <h3>Sandaran dan eksport yang anda buat</h3>
-    <ul>
-      <li><strong>Fail sandaran:</strong> Simpan sandaran atau Kongsi sandaran membuat satu fail .zip dengan semua orang, tempat, nota dan foto anda. Fail ini tidak disulitkan. Ia hanya pergi ke tempat yang anda simpan atau hantar.</li>
-      <li><strong>CSV (Pro):</strong> hamparan orang, nombor telefon, tempat, nota, tag dan medan, tanpa foto. Fail ini tidak disulitkan dan hanya pergi ke tempat yang anda simpan atau hantar.</li>
-    </ul>
-    <h3>Sandaran Android</h3>
-    <p>Jika sandaran Google dihidupkan pada telefon anda, Android menyandarkan pangkalan data PinLocate (orang, tempat, nota dan tetapan, tetapi bukan foto) ke akaun Google anda sendiri. Android menyulitkan sandaran ini dengan kunci skrin anda, dan PinLocate hanya membenarkannya apabila penyulitan itu tersedia. Apabila anda berpindah ke telefon baharu melalui kabel atau Wi-Fi, foto turut disalin. Anda boleh mematikannya dalam tetapan sandaran telefon.</p>
-    <h3>Pembelian</h3>
-    <p>PinLocate Pro ialah langganan yang dibeli melalui Google Play. Google menguruskan pembayaran; PinLocate hanya mengetahui sama ada langganan anda aktif, dan mengingati jawapan itu dalam telefon anda supaya Pro terus berfungsi tanpa internet. Tiada maklumat pembelian anda dihantar kepada pembangun. Anda boleh membatalkannya bila-bila masa di Google Play.</p>
-
-    <h2>Memadam data anda</h2>
-    <p>Padam seseorang atau sesuatu tempat dalam aplikasi dan ia dibuang dari telefon anda, bersama fotonya. Menyahpasang PinLocate memadam semua yang disimpannya. Fail sandaran dan CSV yang anda simpan atau hantar ke tempat lain adalah milik anda untuk dipadam. Sandaran Android dalam akaun Google anda diuruskan melalui tetapan akaun Google anda.</p>
-
-    <h2>Kanak-kanak</h2>
-    <p>PinLocate tidak ditujukan kepada kanak-kanak di bawah umur 13 tahun.</p>
-
-    <h2>Perubahan</h2>
-    <p>Jika polisi ini berubah, versi baharu disiarkan di halaman ini dengan tarikh berkuat kuasa yang baharu.</p>
-
-    <h2>Hubungi</h2>
-    <p>Soalan tentang polisi ini: <a href="mailto:afc25000@gmail.com">afc25000@gmail.com</a></p>
-  </section>
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:support@pinlocate.link">support@pinlocate.link</a></p>
 </main>
+<footer>
+  <a href="/privacy/">Privacy policy</a> ·
+  <a href="/terms/">Terms of service</a> ·
+  Contact: <a href="mailto:support@pinlocate.link">support@pinlocate.link</a>
+</footer>
 </body>
 </html>
